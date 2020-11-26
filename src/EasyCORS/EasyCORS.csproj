@@ -2,8 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Company />
+    <Authors>Manish Tiwari</Authors>
+    <Description>package for easily configuring cors with .net core and .net 5</Description>
+    <PackageId>EasyCors</PackageId>
+    <AssemblyName>EasyCors</AssemblyName>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/manishtiwari25/EasyCors</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/manishtiwari25/EasyCors</RepositoryUrl>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />

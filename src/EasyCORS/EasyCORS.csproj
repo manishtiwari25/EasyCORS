@@ -12,6 +12,9 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/manishtiwari25/EasyCors</PackageProjectUrl>
     <RepositoryUrl>https://github.com/manishtiwari25/EasyCors</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <Title>EasyCors</Title>
+    <Tags>cors;aspnetcore;dotnet5</Tags>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />

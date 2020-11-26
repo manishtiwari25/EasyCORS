@@ -8,7 +8,7 @@
 
     public class EasyCorsConfiguration : IEasyCorsConfiguration
     {
-        private IConfiguration _config;
+        private readonly IConfiguration _config;
 
         public EasyCorsConfiguration(IConfiguration configuration)
         {
@@ -16,8 +16,8 @@
         }
         public async ValueTask<Dictionary<string, Configuration>> GetConfiguration()
         {
-            var configurationData = new Dictionary<string, Configuration>();
-            _config.GetSection(Configuration.ConfigSectionName).Bind(_config);
+            var stringData = _config[Configuration.ConfigSectionName];
+            var configurationData = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, Configuration>>(stringData);
             return await Task.Run(() => configurationData);
         }
     }

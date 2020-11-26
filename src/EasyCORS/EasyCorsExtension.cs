@@ -45,7 +45,8 @@
         }
         public static void UseEasyCors(this IApplicationBuilder applicationBuilder)
         {
-            var configuration = applicationBuilder.ApplicationServices.GetRequiredService<IEasyCorsConfiguration>();
+            var scope = applicationBuilder.ApplicationServices.CreateScope();
+            var configuration = scope.ServiceProvider.GetService<IEasyCorsConfiguration>();
             if (configuration == null)
             {
                 throw new Exception("Please Add EasyCORS Service. example services.AddEasyCORS();");

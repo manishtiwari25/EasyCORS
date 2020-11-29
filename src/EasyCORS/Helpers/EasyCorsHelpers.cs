@@ -36,7 +36,7 @@
             {
                 if (configData.AllowedHeaders == "*")
                 {
-                    builder.WithHeaders();
+                    builder.AllowAnyHeader();
                 }
                 else
                 {

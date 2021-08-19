@@ -16,13 +16,13 @@ jobs:
       with:  
         dotnet-version: 5.0.x  
     - name: Install dependencies  
-      run: dotnet restore src/EasyCors.sln
+      run: dotnet restore src/EasyCors
     - name: Build  
-      run: dotnet build --configuration Release --no-restore  src/EasyCors.sln
+      run: dotnet build --configuration Release --no-restore  src/EasyCors
     - name: Test  
-      run: dotnet test --no-restore --verbosity normal  src/EasyCors.sln
+      run: dotnet test --no-restore --verbosity normal  src/EasyCors
     - name: Publish  
       uses: brandedoutcast/publish-nuget@v2.5.2  
       with:   
-        PROJECT_FILE_PATH: src/EasyCors/EasyCors.csproj
+        PROJECT_FILE_PATH: src/EasyCors/EasyCors/EasyCors.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}} 

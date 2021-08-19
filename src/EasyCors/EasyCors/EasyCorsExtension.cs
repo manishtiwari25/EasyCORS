@@ -49,7 +49,7 @@
             var configuration = scope.ServiceProvider.GetService<IEasyCorsConfiguration>();
             if (configuration == null)
             {
-                throw new Exception("Please Add EasyCORS Service. example services.AddEasyCORS();");
+                throw new ArgumentException("Please Add EasyCORS Service. example services.AddEasyCORS();");
             }
             applicationBuilder.UseCors();
         }

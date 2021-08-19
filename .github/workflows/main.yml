@@ -16,11 +16,11 @@ jobs:
       with:  
         dotnet-version: 5.0.x  
     - name: Install dependencies  
-      run: dotnet restore src
+      run: dotnet restore src/EasyCors.sln
     - name: Build  
-      run: dotnet build --configuration Release --no-restore  src
+      run: dotnet build --configuration Release --no-restore  src/EasyCors.sln
     - name: Test  
-      run: dotnet test --no-restore --verbosity normal  src/AWSSecretManager.Configuration.Extension/AWSSecretManager.Configuration.Extension
+      run: dotnet test --no-restore --verbosity normal  src/EasyCors.sln
     - name: Publish  
       uses: brandedoutcast/publish-nuget@v2.5.2  
       with:   

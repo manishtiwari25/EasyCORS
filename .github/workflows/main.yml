@@ -16,9 +16,9 @@ jobs:
       with:  
         dotnet-version: 5.0.x  
     - name: Install dependencies  
-      run: dotnet restore src/EasyCors
+      run: dotnet restore src
     - name: Build  
-      run: dotnet build --configuration Release --no-restore  src/EasyCors
+      run: dotnet build --configuration Release --no-restore  src
     - name: Test  
       run: dotnet test --no-restore --verbosity normal  src/AWSSecretManager.Configuration.Extension/AWSSecretManager.Configuration.Extension
     - name: Publish  

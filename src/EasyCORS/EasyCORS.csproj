@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Company />
     <Authors>Manish Tiwari</Authors>
     <Description>package for easily configuring cors with .net core and .net 5</Description>
